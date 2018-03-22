@@ -2,6 +2,8 @@
 
 This repo contrains codes on Visual Question Answer task using MXNET based on <a href="">"Question Type Guided Attention in Visual Question Answering"</a>.
 
+Question Type-guided Attention(QTA) utilizes the information of question type to dynamically balance between bottom-up and top-down visual features, respectively extracted from ResNet and Faster R-CNN networks. To generalize QTA to applications
+that lack of question type with minimal performance loss, we also propose a multitask extension to predict question types along with VQA task.
 
 ## Requirements
 
@@ -34,6 +36,21 @@ and [bottom-up-attention](https://github.com/peteanderson80/bottom-up-attention)
 
 ## Training
 We present several models used in the QTA paper: CATL-QTA, MCB-QTA,CATL-QTA-M.
+
+<p align="center">
+   <b>CATL-QT</b><br>
+<img src="readme-related/CAT3LW2V.png" width="400">
+ </p>
+ 
+<p align="center">
+  <b>MCB-QTA</b><br>
+  <img src="readme-related/MCB-att-qtype-sim-new.png" width="800">
+</p>
+
+<p align="center">
+  <b>CATL-QTA-M</b><br>
+<img src="readme-related/multitask1-CAT3LW2V.png" width="380">
+</p>
 
 ## Testing
 After training, you should have saved the model parameters in a .params file. Here we just load the model.
