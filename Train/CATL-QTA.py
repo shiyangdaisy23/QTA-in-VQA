@@ -276,7 +276,16 @@ def train(args):
     default_bucket_key = 30
     vocabulary_size = 7498
     data_train  = VQAtrainIter(train_img0, train_img1, train_q_w2v, train_question, train_ans, train_qtype, args.batch_size,layout=layout)
+    
 
+    np.random.seed(2)
+    idx = np.random.choice(range(538543), 1000, replace=False)
+    val_img0 = val_img0[idx]
+    val_img1 = val_img1[idx]
+    val_q_w2v = val_q_w2v[idx]
+    val_question = val_question[idx]
+    val_ans = val_ans[idx]
+    val_qtype = val_qtype[idx]
     data_eva = VQAtrainIter(val_img0, val_img1, val_q_w2v, val_question, val_ans, val_qtype, args.batch_size, layout=layout)
     
     cell = mx.rnn.SequentialRNNCell()
@@ -340,7 +349,7 @@ def train(args):
     mod.bind(data_shapes=data_shapes, label_shapes = label_shapes, for_training=True, grad_req="write")
     mod.init_params()
 
-    print('here?')
+    print('Start training...')
     epoch_size = 1115299/args.batch_size
     lr_sch0 = mx.lr_scheduler.MultiFactorScheduler(step=[epoch_size*10], factor=0.1)
     lr_sch = mx.lr_scheduler.MultiFactorScheduler(step = [epoch_size * x  for x in [10,30,40,50,100,120,140,150,160,180,200,220,250,300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000,1100,1200,1300,1400,1500]], factor=0.7)
