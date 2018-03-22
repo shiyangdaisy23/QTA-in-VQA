@@ -38,7 +38,7 @@ and [bottom-up-attention](https://github.com/peteanderson80/bottom-up-attention)
 We present several models used in the QTA paper: CATL-QTA, MCB-QTA,CATL-QTA-M.
 
 <p align="center">
-   <b>CATL-QT</b><br>
+   <b>CATL-QTA</b><br>
 <img src="readme-related/CAT3LW2V.png" width="400">
  </p>
  
