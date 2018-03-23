@@ -4,7 +4,7 @@ We present several models used in the QTA paper: CATL-QTA, MCB-QTA,CATL-QTA-M.
 CATL-QTA: A one-layer MLP given concatenated output from a two-layer LSTM and two weighted pre-trained image vector features.
 
 <p align="center">
-<img src="https://github.com/shiyangdaisy23/Question-Type-Guided-Attention-in-VQA/readme-related/CAT3LW2V.png" width="400">
+<img src="../readme-related/CAT3LW2V.png" width="400">
  </p>
 
 MCB-QTA: Two MCB with spatial attention using ResNet and Faster-RCNN as image feature respectively. 
