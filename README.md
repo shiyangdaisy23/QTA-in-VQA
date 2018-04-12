@@ -1,6 +1,6 @@
 # Question-Type-Guided-Attention-in-VQA
 
-This repo contrains codes on Visual Question Answer task using MXNET based on <a href="">"Question Type Guided Attention in Visual Question Answering"</a>.
+This repo contrains codes on Visual Question Answer task using MXNET based on <a href="https://arxiv.org/abs/1804.02088">"Question Type Guided Attention in Visual Question Answering"</a>.
 
 Question Type-guided Attention(QTA) utilizes the information of question type to dynamically balance between bottom-up and top-down visual features, respectively extracted from ResNet and Faster R-CNN networks. To generalize QTA to applications
 that lack of question type with minimal performance loss, we also propose a multitask extension to predict question types along with VQA task.
